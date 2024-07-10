@@ -60,6 +60,7 @@ export const Navigation = () => {
           <nav className="flex flex-col gap-y-2 pt-6">
             {routes.map((route) => (
               <Button
+                key={route.href}
                 variant={route.href === pathname ? "secondary" : "ghost"}
                 onClick={() => onClick(route.href)}
                 className="w-full justify-start"
